@@ -1,0 +1,3 @@
+tenir en compte qu'on doit savoir qui est connecter
+comparer avec à la base le login ou le IdUSER 
+la note ce met  dans la table participer, pour savoir au dernier match ses perfs
