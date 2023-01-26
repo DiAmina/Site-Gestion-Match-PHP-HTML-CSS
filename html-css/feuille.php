@@ -66,10 +66,12 @@
                 <th>Poste préféré</th>
                 <th>Commentaires</th>
                 <th>Evaluation entraineur</th>
+                <th>Ajouter au match</th>
             </thead>
             <tbody>
                 <?php 
-                /*if($read ==true){
+                $read == true;
+                if($read == true){
                     while($donnes = $req->fetch()){
                     echo'<tr>
                         <td>'.$donnees['photo'].'</td>
@@ -78,16 +80,14 @@
                         <td>'.$donnees['posteprefere'].'</td>
                         <td>'.$donnees['commentaire'].'</td>
                         <td>'.$donnees['performance'].'</td>
+                        <td>'.'<a href="feuille_saisi.php?var3='.$donnees['nLicence'].'">Joueur<img src="img/ajouter.png"></a>'.'</td>
                         </tr>';
                     }
                 }
-                */
+                
                 ?>
             </tbody> 
         </table>
-        <!--
-        <input class="btn btn-outline-primary" type="button" value="Précedent">
-        -->
         </form>
     </div>
 </body>

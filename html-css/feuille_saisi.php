@@ -28,7 +28,7 @@ if(isset($_POST['SaisiMatch'])){
 
             header("Location:feuille.php");
     
-        $req = $linkpdo->prepare("SELECT * FROM joueur WHERE statut = 'actif'");
+        $req = $linkpdo->prepare("SELECT photo,taille,poids,posteprefere,commentaire FROM joueur WHERE statut = 'actif'");
         $req->execute(array());
         $read = true;
         
