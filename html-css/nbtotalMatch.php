@@ -6,8 +6,12 @@ try {
         die('Erreur : ' . $e->getMessage());
     }
 
-$req = $pdo->prepare("SELECT * FROM partie");
-$req->execute(array());
+$req = $linkpdo->prepare("SELECT * FROM partie");
+$req = $reqMatch->execute(array());
 echo count($req);
+if (prepare($req)==0){
+    echo'Il n y a pas encore de joueurs ajouter !';
+
+}
 
 ?>

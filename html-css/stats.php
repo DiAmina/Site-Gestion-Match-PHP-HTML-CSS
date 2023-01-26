@@ -8,7 +8,7 @@ try {
         die('Erreur : ' . $e->getMessage());
     }
 
-   echo'nombre de match total'; $reqMachtoto =$linkpdo->prepare('SELECT COUNT * FROM partie');
+   $reqMachtoto =$linkpdo->prepare('SELECT COUNT * FROM partie');
     
 
 
@@ -40,7 +40,7 @@ try {
     </header>
     <div class="row mb-3">
             <div class="col">
-    Nombre tatal de match <input type="text" class="form-control form-control-sm" name="" value="<?=$reqMachtoto?>"  disabled/><br>                            
+    Nombre tatal de match <input type="text" class="form-control form-control-sm" name="" value=""  disabled/><br>                            
             </div>               
             <div class="col"> 
     Pourcentage de match gagnés <input type="text" class="form-control form-control-sm" name="" value=""  disabled/><br> 
