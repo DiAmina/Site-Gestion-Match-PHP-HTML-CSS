@@ -62,7 +62,7 @@ echo count($req);
                     <td>'.$donnees['heure'].'</td>
                     <td>'.$donnees['domicile'].'</td>
                     <td>'.$donnees['equipeAdverse'].'</td>
-                    <td>'.'<a href="modifierMatch.php?var4='.$donnees['IdMatch'].'">Modifier</a>'.'</td>
+                    <td>'.'<a href="modifierMatch.php?var3='.$donnees['IdMatch'].'">Modifier</a>'.'</td>
                     </tr>';
                 }
             }

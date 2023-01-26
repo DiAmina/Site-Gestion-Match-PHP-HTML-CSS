@@ -1,3 +1,27 @@
+<?php
+
+$domicile = $_POST['domicile'];
+$equipeAd = $_POST['equipeAdverse'];
+$date = $_POST['dateM'];
+$heure = $_POST['heure'];
+
+try {
+    $linkpdo = new PDO("mysql:host=localhost;dbname=projetphp", 'root', '');
+    }
+    catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+
+    $reqRecupe =$linkpdo->prepare('SELECT * FROM partie WHERE idMatch = :idMatch');
+    $reqRecupe->execute(array(
+        'domicile'=> $domicile,
+        'equipeAdverse'=> $equipeAd,
+        'dateM' => $date,
+        'heure'=> $heure
+    ));
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">

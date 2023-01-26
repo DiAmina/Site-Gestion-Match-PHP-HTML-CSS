@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="styleacc.css">
     <title>Statistique</title>
 </head>
@@ -20,5 +21,34 @@
             </ul>
         </nav>
     </header>
+    <div class="row mb-3">
+            <div class="col">
+    Nb total de match gagnés <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>    
+            </div>    
+            <div class="col">       
+    Nb total de match perdus <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>    
+            </div>            
+            <div class="col"> 
+    Pourcentage de match gagnés <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br> 
+            </div>      
+            <div class="col">           
+    Pourcentage de match perdus <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
+            </div> 
+            <div class="col"> 
+    Nom équipe adverse<input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
+            </div> 
+    </div>
+
+    <div class="table-responsive-md table-bordered">
+        <table class="table table-dark table-hover table-bordered">
+            <thead >
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Statut</th> 
+                <th>Nb total titulaire</th>
+                <th>Nb total remplçant</th>
+                <th>pourcentage de match gagnée</th>
+
+        </thead>
 </body>
 </html>
