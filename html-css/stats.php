@@ -9,7 +9,10 @@ try {
     }
 
    $reqMachtoto =$linkpdo->prepare('SELECT COUNT * FROM partie');
-    
+
+   $reqjoueurStt = $linkpdo->prepare ('SELECT nom, prenom, statut from joueur');
+   $req = $reqjoueurStt->execute(array());
+   $read = true;      
 
 
 ?>
@@ -62,7 +65,19 @@ try {
                 <th>Nb total titulaire</th>
                 <th>Nb total remplçant</th>
                 <th>pourcentage de match gagnée</th>
-
         </thead>
+        <tbody>
+            <?php 
+            if ($read == true){
+                while($donnees = $reqjoueurStt->fetch()){
+            echo'<tr>
+            <td>'.$donnees['nom'].'</td>
+            <td>'.$donnees['prenom'].'</td>
+            <td>'.$donnees['statut'].'</td>
+            </tr>';
+                }
+            }
+            ?>
+        </tbody>
 </body>
 </html>
