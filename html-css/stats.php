@@ -1,3 +1,20 @@
+<?php
+
+
+try {
+    $linkpdo = new PDO("mysql:host=localhost;dbname=projetphp", 'root', '');
+    }
+    catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+
+   echo'nombre de match total'; $reqMachtoto =$linkpdo->prepare('SELECT COUNT * FROM partie');
+    
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,19 +40,16 @@
     </header>
     <div class="row mb-3">
             <div class="col">
-    Nb total de match gagnés <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>    
-            </div>    
-            <div class="col">       
-    Nb total de match perdus <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>    
-            </div>            
+    Nombre tatal de match <input type="text" class="form-control form-control-sm" name="" value="<?=$reqMachtoto?>"  disabled/><br>                            
+            </div>               
             <div class="col"> 
-    Pourcentage de match gagnés <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br> 
+    Pourcentage de match gagnés <input type="text" class="form-control form-control-sm" name="" value=""  disabled/><br> 
             </div>      
             <div class="col">           
-    Pourcentage de match perdus <input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
+    Pourcentage de match perdus <input type="text" class="form-control form-control-sm" name="" value=""  disabled/><br>                
             </div> 
             <div class="col"> 
-    Nom équipe adverse<input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
+    Nom équipe adverse<input type="text" class="form-control form-control-sm" name="" value=""  disabled/><br>                
             </div> 
     </div>
 

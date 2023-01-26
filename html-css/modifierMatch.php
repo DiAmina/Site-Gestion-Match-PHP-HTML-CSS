@@ -14,8 +14,7 @@ try {
 
     $reqRecupe =$linkpdo->prepare('SELECT * FROM partie WHERE idMatch = :idMatch');
     $reqRecupe->execute(array(
-        'domicile'=> $domicile,
-        'equipeAdverse'=> $equipeAd,
+   'equipeAdverse'=> $equipeAd,
         'dateM' => $date,
         'heure'=> $heure
     ));
