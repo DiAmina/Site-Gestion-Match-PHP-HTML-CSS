@@ -39,8 +39,6 @@ $reqMatch = $pdo->query("SELECT * FROM partie")->fetchAll();
                 <th>Heure</th>
                 <th>Lieu</th> 
                 <th>Match</th>
-                <th>Etat</th>
-                <th>Resultat</th>
         </thead>
         <tbody>
             <?php foreach($reqMatch as $reqMatch): ?>
@@ -49,8 +47,6 @@ $reqMatch = $pdo->query("SELECT * FROM partie")->fetchAll();
                 <td><?= $reqMatch['heure']?></td>
                 <td><?= $reqMatch['domicile']?></td>
                 <td><?= $reqMatch['equipeAdverse']?></td>
-                <td><?= $reqMatch['etat']?></td>
-                <td><?= $reqMatch['resultat']?></td>
             </tr>
             <?php endforeach ?>
     </body>

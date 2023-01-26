@@ -1,29 +1,3 @@
-<?php
-$read  = false;
-$domicile = $_POST['domicile'];
-$equipeAd = $_POST['equipeAdverse'];
-$date = $_POST['dateM'];
-$heure = $_POST['heure'];
-
-
-if(isset($_POST['joueurAct'])){
-	try {
-		$linkpdo = new PDO("mysql:host=localhost;dbname=projetphp", 'root', '');
-		}
-		catch (Exception $e) {
-			die('Erreur : ' . $e->getMessage());
-		}
-
-$req = $linkpdo->prepare("SELECT * FROM joueur WHERE statut = 'actif'");
-$req->execute(array());
-$read = true;
-
-$reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,heure)
-    VALUES (:domicile, :equipeAdverse, :dateM, :heure)');
-
-}
-
-?>
 
 <!DOCTYPE html>
 <html lang="fr">
@@ -50,7 +24,15 @@ $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,
     </header>
     <div class="container">
         <h3>Feuille de match</h3>
-        <form method="post" action="">
+        <form method="post" action="feuille_saisi.php">
+    <div class="row mb-3">
+        <div class="col">
+            Domicile ou Extérieur<input type="text" class="form-control form-control-sm" name="domicile" value="" placeholder="" required><br>                
+        </div>
+        <div class="col">
+            Nom équipe adverse<input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
+        </div>
+    </div>
     <div class="row mb-3">
         <div class="col">
             Date du match<input type="date" class="form-control form-control-sm" name="dateM" value="" placeholder="" required><br>                
@@ -59,6 +41,8 @@ $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,
             Heure du match<input type="time" class="form-control form-control-sm" name="heure" value="" placeholder="" required><br>                
         </div>
     </div>
+   
+    <!-- 
     <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
         <label class="form-check-label" for="inlineRadio1">A domicile</label>
@@ -67,8 +51,9 @@ $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
         <label class="form-check-label" for="inlineRadio2">Extérieur</label>
     </div>
-    <br></br>
-    <input class="btn btn-primary" type="button" name="joueurAct" value="Joueurs actifs" >
+
+    -->
+    <input class="btn btn-primary" type="button" name="SaisiMatch" value="Enregistrer" >
          <br></br>
         <table class="table">
             <thead >
@@ -81,7 +66,7 @@ $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,
             </thead>
             <tbody>
                 <?php 
-                if($read ==true){
+                /*if($read ==true){
                     while($donnes = $req->fetch()){
                     echo'<tr>
                         <td>'.$donnees['photo'].'</td>
@@ -93,10 +78,13 @@ $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,
                         </tr>';
                     }
                 }
+                */
                 ?>
             </tbody> 
         </table>
+        <!--
         <input class="btn btn-outline-primary" type="button" value="Précedent">
+        -->
         </form>
     </div>
 </body>
