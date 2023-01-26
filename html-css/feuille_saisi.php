@@ -13,7 +13,7 @@ if(isset($_POST['SaisiMatch'])){
 			die('Erreur : ' . $e->getMessage());
 		}
 
-        $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,heure)
+        $reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile, equipeAdverse, dateM, heure)
         VALUES (:domicile, :equipeAdverse, :dateM, :heure)');
 
         if ($reqInsert == false){
@@ -26,15 +26,18 @@ if(isset($_POST['SaisiMatch'])){
             'heure' => $heure,
             ));
 
+            header("Location:feuille.php");
+    
+        $req = $linkpdo->prepare("SELECT * FROM joueur WHERE statut = 'actif'");
+        $req->execute(array());
+        $read = true;
+        
+
             if ($reqIns2 == false){
                 $reqInsert->debugDumpParams();
                 die ('erreur de execute');
             }
-        /*
-        $req = $linkpdo->prepare("SELECT * FROM joueur WHERE statut = 'actif'");
-        $req->execute(array());
-        $read = true;
-        */
+        
 }
 
 ?>

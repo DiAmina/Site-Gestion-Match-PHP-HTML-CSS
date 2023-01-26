@@ -27,7 +27,10 @@
         <form method="post" action="feuille_saisi.php">
     <div class="row mb-3">
         <div class="col">
-            Domicile ou Extérieur<input type="text" class="form-control form-control-sm" name="domicile" value="" placeholder="" required><br>                
+        Domicile ou extérieur<select class="form-control form-control-sm" name="domicile">
+            <option>Domicile</option>
+            <option>Extérieur</option>
+        </select>
         </div>
         <div class="col">
             Nom équipe adverse<input type="text" class="form-control form-control-sm" name="equipeAdverse" value="" placeholder="" required><br>                
@@ -53,7 +56,7 @@
     </div>
 
     -->
-    <input class="btn btn-primary" type="button" name="SaisiMatch" value="Enregistrer" >
+    <input class="btn btn-primary" type="submit" name="SaisiMatch" value="Enregistrer" >
          <br></br>
         <table class="table">
             <thead >
