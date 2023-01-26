@@ -28,15 +28,15 @@ if(isset($_POST['SaisiMatch'])){
 
             header("Location:feuille.php");
     
-        $req = $linkpdo->prepare("SELECT photo,taille,poids,posteprefere,commentaire FROM joueur WHERE statut = 'actif'");
-        $req->execute(array());
+        $reqSelect = $linkpdo->prepare("SELECT photo,taille,poids,posteprefere,commentaire FROM joueur WHERE statut = 'actif'");
+        $req =$reqSelect->execute(array());
         $read = true;
         
 
-            if ($reqIns2 == false){
-                $reqInsert->debugDumpParams();
-                die ('erreur de execute');
-            }
+        if ($reqIns2 == false){
+            $reqInsert->debugDumpParams();
+            die ('erreur de execute');
+        }
         
 }
 

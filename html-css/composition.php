@@ -1,12 +1,23 @@
 <?php
-$pdo = new PDO("mysql:host=localhost;dbname=projetphp", 'root', '');
-            
-$reqMatch = $pdo->query("SELECT * FROM partie")->fetchAll();
-//echo count($req);
+
+try {
+    $linkpdo = new PDO("mysql:host=localhost;dbname=projetphp", 'root', '');
+    }
+    catch (Exception $e) {
+        die('Erreur : ' . $e->getMessage());
+    }
+
+    $reqMatch = $linkpdo->prepare ('SELECT * from partie');
+    $req = $reqMatch->execute(array());
+    $read = true;      
+
+/*$reqMatch = $linkpdo->query("SELECT * FROM partie")->fetchAll();
+echo count($req);
 //if (query($req)==0){
     //echo"Il n'y a pas encore de joueurs ajouter !";
 
-//}
+}
+*/
 
 ?>
 
@@ -39,15 +50,23 @@ $reqMatch = $pdo->query("SELECT * FROM partie")->fetchAll();
                 <th>Heure</th>
                 <th>Lieu</th> 
                 <th>Match</th>
+                <th>Modifier</th>
+
         </thead>
         <tbody>
-            <?php foreach($reqMatch as $reqMatch): ?>
-            <tr>
-                <td><?= $reqMatch['date']?></td>
-                <td><?= $reqMatch['heure']?></td>
-                <td><?= $reqMatch['domicile']?></td>
-                <td><?= $reqMatch['equipeAdverse']?></td>
-            </tr>
-            <?php endforeach ?>
+            <?php 
+            if ($read == true){
+                while($donnees = $reqMatch->fetch()){
+                    echo'<tr>
+                    <td>'.$donnees['dateM'].'</td>
+                    <td>'.$donnees['heure'].'</td>
+                    <td>'.$donnees['domicile'].'</td>
+                    <td>'.$donnees['equipeAdverse'].'</td>
+                    <td>'.'<a href="modifierMatch.php?var4='.$donnees['IdMatch'].'">Modifier</a>'.'</td>
+                    </tr>';
+                }
+            }
+            ?>
+            
     </body>
     </html>
