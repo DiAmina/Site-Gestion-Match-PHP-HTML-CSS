@@ -1,5 +1,10 @@
 <?php
 $read  = false;
+$domicile = $_POST['domicile'];
+$equipeAd = $_POST['equipeAdverse'];
+$date = $_POST['dateM'];
+$heure = $_POST['heure'];
+
 
 if(isset($_POST['joueurAct'])){
 	try {
@@ -12,6 +17,9 @@ if(isset($_POST['joueurAct'])){
 $req = $linkpdo->prepare("SELECT * FROM joueur WHERE statut = 'actif'");
 $req->execute(array());
 $read = true;
+
+$reqInsert = $linkpdo->prepare('INSERT INTO partie(domicile,equipeAdverse,dateM,heure)
+    VALUES (:domicile, :equipeAdverse, :dateM, :heure)');
 
 }
 
@@ -45,7 +53,7 @@ $read = true;
         <form method="post" action="">
     <div class="row mb-3">
         <div class="col">
-            Date du match<input type="date" class="form-control form-control-sm" name="date" value="" placeholder="" required><br>                
+            Date du match<input type="date" class="form-control form-control-sm" name="dateM" value="" placeholder="" required><br>                
         </div>
         <div class="col">
             Heure du match<input type="time" class="form-control form-control-sm" name="heure" value="" placeholder="" required><br>                
