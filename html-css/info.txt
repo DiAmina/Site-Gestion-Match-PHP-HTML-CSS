@@ -1,0 +1,8 @@
+#Gestion d'une équipe de sport
+
+login:Prof
+mot de passe:MdpProf
+URL:https://discord.com/channels/@me/1024667008807227432/1068297906731372564
+
+Nom des binôme: MADI Amina KAYA BARAN
+
