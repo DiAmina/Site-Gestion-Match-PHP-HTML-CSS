@@ -26,24 +26,24 @@
             <form method="post"  action="saisi_inscri.php">
 				<div class="row mb-3">
                     <div class="col">
-                        <input type="text" class="form-control form-control-sm" name="nom" value="" placeholder="Nom" required><br>
+                       Nom <input type="text" class="form-control form-control-sm" name="nom" value="" placeholder="Nom" required><br>
                     </div>
                     <div clas="col">
-                        <input type="text" class="form-control form-control-sm" name="prenom" value="" placeholder="Prénom" required> <br>
+                       Prenom <input type="text" class="form-control form-control-sm" name="prenom" value="" placeholder="Prénom" required> <br>
                     </div>
                 </div>
                 <div class="row mb-3">
                     <div clas="col">
-					    <input type="date" class="form-control form-control-sm" name="dnaissance" value="" placeholder="Date de naissance" required><br>
+					  Date de naissance  <input type="date" class="form-control form-control-sm" name="dnaissance" value="" placeholder="Date de naissance" required><br>
                     </div>
                     <div clas="col">
-                        <input type="char3" class="form-control form-control-sm" name="poids" value="" placeholder="Poids en Kg" required><br>
+                      Poids  <input type="char3" class="form-control form-control-sm" name="poids" value="" placeholder="Poids en Kg" required><br>
                     </div>
                 </div>
-                        <input type="char3" class="form-control form-control-sm" name="taille" value="" placeholder="Taille en cm" required><br>
-                        <input type="text" class="form-control form-control-sm" name="posteprefere" value="" placeholder="Poste préferé" required><br>
-                        <input type="text" class="form-control form-control-sm" name="statut" value="" placeholder="Statut" required><br>
-                        <input type="file" class="form-control form-control-sm" name="photo" value="" placeholder="Photo" required><br>
+                       Taille <input type="char3" class="form-control form-control-sm" name="taille" value="" placeholder="Taille en cm" required><br>
+                       Poste preferé <input type="text" class="form-control form-control-sm" name="posteprefere" value="" placeholder="Poste préferé" required><br>
+                       Statut <input type="text" class="form-control form-control-sm" name="statut" value="" placeholder="Statut" required><br>
+                       Photo <input type="file" class="form-control form-control-sm" name="photo" value="" placeholder="Photo" required><br>
                         <button type="reset" class="btn btn-outline-danger mb-2" value="vide">Vider</button>
                         <button type="submit" class="btn btn-outline-success mb-2" value="ok" name="valider" >Valider </button>
 			           </div>
