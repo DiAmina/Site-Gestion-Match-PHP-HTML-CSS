@@ -29,7 +29,7 @@
                        Nom <input type="text" class="form-control form-control-sm" name="nom" value="" placeholder="Nom" required><br>
                     </div>
                     <div clas="col">
-                       Prenom <input type="text" class="form-control form-control-sm" name="prenom" value="" placeholder="Prénom" required> <br>
+                       Prénom <input type="text" class="form-control form-control-sm" name="prenom" value="" placeholder="Prénom" required> <br>
                     </div>
                 </div>
                 <div class="row mb-3">
@@ -41,7 +41,7 @@
                     </div>
                 </div>
                        Taille <input type="char3" class="form-control form-control-sm" name="taille" value="" placeholder="Taille en cm" required><br>
-                       Poste preferé <input type="text" class="form-control form-control-sm" name="posteprefere" value="" placeholder="Poste préferé" required><br>
+                       Poste préferé <input type="text" class="form-control form-control-sm" name="posteprefere" value="" placeholder="Poste préferé" required><br>
                        Statut <input type="text" class="form-control form-control-sm" name="statut" value="" placeholder="Statut" required><br>
                        Photo <input type="file" class="form-control form-control-sm" name="photo" value="" placeholder="Photo" required><br>
                         <button type="reset" class="btn btn-outline-danger mb-2" value="vide">Vider</button>
